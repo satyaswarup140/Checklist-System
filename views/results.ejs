@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Checklist Results</h1>
+        
+        <div class="mt-4">
+            <h2>Results:</h2>
+            <ul class="list-group">
+                <% results.forEach(result => { %>
+                    <li class="list-group-item"><%= result %></li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <div class="mt-4">
+            <h2>API Data:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Application ID: <%= apiData.applicationID %></li>
+                <li class="list-group-item">Application Number: <%= apiData.applicationNumber %></li>
+                <li class="list-group-item">Application Type: <%= apiData.applicationTypeName %></li>
+                <li class="list-group-item">Risk Rating: <%= apiData.riskRating %></li>
+                <li class="list-group-item">Submitted Date: <%= apiData.submittedDateFormatted %></li>
+                <li class="list-group-item">LTV: <%= apiData.ltv %></li>
+                <li class="list-group-item">Product: <%= apiData.product %></li>
+                <li class="list-group-item">Number of Applicants: <%= apiData.noOfApplicants %></li>
+                <li class="list-group-item">Broker Name: <%= apiData.brokerName %></li>
+                <li class="list-group-item">Broker Email: <%= apiData.brokerEmail %></li>
+                <li class="list-group-item">Solicitor Name: <%= apiData.solicitorName %></li>
+                <li class="list-group-item">Solicitor Email: <%= apiData.solicitorEmail %></li>
+                <li class="list-group-item">Created At: <%= apiData.createdAt %></li>
+                <li class="list-group-item">Last Updated: <%= apiData.lastUpdated %></li>
+                <li class="list-group-item">Status: <%= apiData.isActive ? 'Active' : 'Inactive' %></li>
+            </ul>
+        </div>
+
+        <div class="mt-4 text-center">
+            <a href="/" class="btn btn-secondary">Go Back</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
