@@ -2,7 +2,7 @@ const express = require("express");
 const checklistRoutes = require("./routes/checklistRoutes"); // Adjust the path as necessary
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 // Middleware to parse JSON body
 app.use(express.json());
